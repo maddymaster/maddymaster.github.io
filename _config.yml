@@ -1,13 +1,13 @@
 # Setup
-title:        Project or Site name
-tagline:      A responsive theme for your project on GitHub Pages
+title:        Maddy's Blogs
+tagline:      My Latest Blog Posts
 baseurl:      ""
 paginate:     1
 
 # About/contact
 author:
-  name:       Author name
-  url:        http://yourhomepage.com 
+  name:       Maddy Anand
+  url:        http://maddymaster.github.io
 
 # Gems
 gems:
