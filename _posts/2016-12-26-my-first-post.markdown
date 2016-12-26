@@ -1,24 +1,50 @@
 ---
 layout: default
-title:  "Welcome to Jekyll!"
+title:  "Learning Python"
 date:   2016-12-25 17:50:00
 categories: main
 ---
+# Python Tutorial
 
-You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
-To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
+Hello and welcome to my blog. I want to first cover some important tutorials on `python` basics and then include some advanced versions. I intend to help those who are beginners in programming and also cater to advanced programmers who want to learn Python.
 
-Jekyll also offers powerful support for code snippets:
+I practice a teaching method that focuses on Logic and Purpose first and then its application and use. That way we know what and why we are learning a particular lesson and then focus on where it can be applied. This helps understand topics deeper and remember for a long time.
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+I will also try to provide visuals along with code snippets and I hope to publish two topics every week and be done with Python in the first quarter. 
 
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh].
+I know this is slow, but, this is all the time I got. Follow my blog topics in the following order. (Some may not exist as I haven't blogged them yet)
 
-[jekyll-gh]: https://github.com/mojombo/jekyll
-[jekyll]:    http://jekyllrb.com
+# Table of Contents
+## Learn the Basics of Python
+* Strings
+* Variables and Types
+* Lists
+* Basic Operators
+* String Formatting
+* Basic String Operations
+* Conditions
+* Loops
+* Functions
+* Classes and Objects
+* Dictionaries
+* Modules and Packages
+
+## Python Data Science Tutorials
+* Numpy Arrays
+* Pandas Basics
+* Advanced Tutorials
+* Generators
+* List Comprehensions
+* Multiple Function Arguments
+* Regular Expressions
+* Exception Handling
+* Sets
+* Serialization
+* Partial functions
+* Code Introspection
+* Closures
+* Decorators
+
+I will add some visual explanations on concepts of Programming as well. For ex: Object Oriented Programming, OOP Design, Data Structures, I/O etc., 
+
+Please follow on and let me know of any feedback. 
