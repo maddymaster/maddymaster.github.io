@@ -128,4 +128,4 @@ for asdf in open('test.txt'):
 
 `Second Line`
 
-## Next Up Sets and Booleans
+## [Next Up Sets and Booleans](/python-tutorial/2016/12/25/setsandbooleans.html)

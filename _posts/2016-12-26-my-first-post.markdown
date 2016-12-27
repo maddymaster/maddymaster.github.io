@@ -23,7 +23,7 @@ I know this is slow, but, this is all the time I got. Follow my blog topics in t
 * [Lists](/python-tutorial/2016/12/25/lists.html)
 * [Tuples](/python-tutorial/2016/12/26/tuples.html)
 * [Files](/python-tutorial/2016/12/26/files.html)
-* Sets and Booleans
+* [Sets and Booleans](/python-tutorial/2016/12/25/setsandbooleans.html)
 * Comparison Operators
 * Chained Comparison Operators
 * Python Statements - if, elif, and else Statements
