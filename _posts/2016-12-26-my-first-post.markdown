@@ -18,7 +18,7 @@ I know this is slow, but, this is all the time I got. Follow my blog topics in t
 
 ## Learn the Basics of Python
 
-* [Strings](/main/2016/12/25/strings.html)
+* [Strings](/python-tutorial/2016/12/25/strings.html)
 * [Numbers](/python-tutorial/2016/12/26/numbers.html)
 * [Lists](/python-tutorial/2016/12/25/lists.html)
 * [Tuples](/python-tutorial/2016/12/26/tuples.html)
