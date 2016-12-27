@@ -1,0 +1,35 @@
+---
+layout: default
+title:  "Best Places to Practice Python"
+date:   2016-12-25 17:50:00
+categories: Python-Tutorial
+---
+# Practice makes you perfect
+
+I found the following python challenges very useful
+
+Challenges: 
+
+<http://hackerearth.com>
+
+Basic Practice:
+
+<http://codingbat.com/python>
+
+More Mathematical (and Harder) Practice:
+
+<https://projecteuler.net/archives>
+
+List of Practice Problems:
+
+<http://www.codeabbey.com/index/task_list>
+
+A SubReddit Devoted to Daily Practice Problems:
+
+<https://www.reddit.com/r/dailyprogrammer>
+
+A very tricky website with very few hints and touch problems (Not for beginners but still interesting)
+
+<http://www.pythonchallenge.com/>
+
+Hope this helps

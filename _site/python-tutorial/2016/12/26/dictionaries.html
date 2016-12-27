@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  
+  <head>
+  <meta charset="UTF-8">
+  <title>Maddy's Blogs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#157878">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/cayman.css">
+</head>
+
+  <body>
+    <section class="page-header">
+  <h1 class="project-name">Maddy's Blogs</h1>
+  <h2 class="project-tagline">My Latest Blog Posts</h2>
+  <a href="#" class="btn">About Me</a>
+  <a href="/" class="btn">Home</a>
+  <a href="#" class="btn"> Connect on Linkedin </a>
+  <a href="#" class="btn"> Follow me on Twitter </a>
+</section>
+
+
+    <section class="main-content">
+      
+      <h1 id="dictionaries">Dictionaries</h1>
+
+<p>We’ve been learning about sequences in Python but now we’re going to switch gears and learn about mappings in Python. If you’re familiar with other languages you can think of these Dictionaries as hash tables.</p>
+
+<p>This section will serve as a brief introduction to dictionaries and consist of:</p>
+
+<ol>
+  <li>Constructing a Dictionary</li>
+  <li>Accessing objects from a dictionary</li>
+  <li>Nesting Dictionaries</li>
+  <li>Basic Dictionary Methods</li>
+</ol>
+
+<p>So what are mappings? Mappings are a collection of objects that are stored by a key, unlike a sequence that stored objects by their relative position. This is an important distinction, since mappings won’t retain order since they have objects defined by a key.</p>
+
+<p>A Python dictionary consists of a key and then an associated value. That value can be almost any Python object.</p>
+
+<h2 id="constructing-a-dictionary">Constructing a Dictionary</h2>
+<p>Let’s look at how to construct a dictionary and also in the process, understand how they work!</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Make a dictionary with {} and : to signify a key and a value</span>
+<span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s">'key1'</span><span class="p">:</span><span class="s">'value1'</span><span class="p">,</span><span class="s">'key2'</span><span class="p">:</span><span class="s">'value2'</span><span class="p">}</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span><span class="c"># Call values by their key</span>
+<span class="n">my_dict</span><span class="p">[</span><span class="s">'key2'</span><span class="p">]</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span><span class="s">'value2'</span>
+</code></pre>
+</div>
+<p>Its important to note that dictionaries are very flexible in the data types they can hold. For example:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">13</span><span class="p">]:</span> <span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s">'key1'</span><span class="p">:</span><span class="mi">123</span><span class="p">,</span><span class="s">'key2'</span><span class="p">:[</span><span class="mi">12</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">33</span><span class="p">],</span><span class="s">'key3'</span><span class="p">:[</span><span class="s">'item0'</span><span class="p">,</span><span class="s">'item1'</span><span class="p">,</span><span class="s">'item2'</span><span class="p">]}</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span><span class="c">#Lets call items from the dictionary</span>
+<span class="n">my_dict</span><span class="p">[</span><span class="s">'key3'</span><span class="p">]</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">4</span><span class="p">]:[</span><span class="s">'item0'</span><span class="p">,</span> <span class="s">'item1'</span><span class="p">,</span> <span class="s">'item2'</span><span class="p">]</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span><span class="c"># Can call an index on that value</span>
+<span class="n">my_dict</span><span class="p">[</span><span class="s">'key3'</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">5</span><span class="p">]:</span>
+<span class="s">'item0'</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">7</span><span class="p">]:</span>
+<span class="c">#Can then even call methods on that value</span>
+<span class="n">my_dict</span><span class="p">[</span><span class="s">'key3'</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">7</span><span class="p">]:</span><span class="s">'ITEM0'</span>
+</code></pre>
+</div>
+
+<p>We can affect the values of a key as well. For instance:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">14</span><span class="p">]:</span>
+<span class="n">my_dict</span><span class="p">[</span><span class="s">'key1'</span><span class="p">]</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">14</span><span class="p">]:</span><span class="mi">123</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">15</span><span class="p">]:</span><span class="c"># Subtract 123 from the value</span>
+<span class="n">my_dict</span><span class="p">[</span><span class="s">'key1'</span><span class="p">]</span> <span class="o">=</span> <span class="n">my_dict</span><span class="p">[</span><span class="s">'key1'</span><span class="p">]</span> <span class="o">-</span> <span class="mi">123</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">16</span><span class="p">]:</span><span class="c">#Check</span>
+<span class="n">my_dict</span><span class="p">[</span><span class="s">'key1'</span><span class="p">]</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">16</span><span class="p">]:</span><span class="mi">0</span>
+</code></pre>
+</div>
+
+<p>A quick note, Python has a built-in method of doing a self subtraction or addition (or multiplication or division). We could have also used += or -= for the above statement. For example:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">17</span><span class="p">]:</span><span class="c"># Set the object equal to itself minus 123 </span>
+<span class="n">my_dict</span><span class="p">[</span><span class="s">'key1'</span><span class="p">]</span> <span class="o">-=</span> <span class="mi">123</span>
+<span class="n">my_dict</span><span class="p">[</span><span class="s">'key1'</span><span class="p">]</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">17</span><span class="p">]:</span><span class="o">-</span><span class="mi">123</span>
+</code></pre>
+</div>
+
+<p>We can also create keys by assignment. For instance if we started off with an empty dictionary, we could continually add to it:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">21</span><span class="p">]:</span><span class="c"># Create a new dictionary</span>
+<span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">22</span><span class="p">]:</span><span class="c"># Create a new key through assignment</span>
+<span class="n">d</span><span class="p">[</span><span class="s">'animal'</span><span class="p">]</span> <span class="o">=</span> <span class="s">'Dog'</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">24</span><span class="p">]:</span><span class="c"># Can do this with any object</span>
+<span class="n">d</span><span class="p">[</span><span class="s">'answer'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">42</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">25</span><span class="p">]:</span><span class="c">#Show</span>
+<span class="n">d</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">25</span><span class="p">]:{</span><span class="s">'animal'</span><span class="p">:</span> <span class="s">'Dog'</span><span class="p">,</span> <span class="s">'answer'</span><span class="p">:</span> <span class="mi">42</span><span class="p">}</span>
+</code></pre>
+</div>
+
+<h2 id="nesting-with-dictionaries">Nesting with Dictionaries</h2>
+<p>Hopefully your starting to see how powerful Python is with its flexibility of nesting objects and calling methods on them. Let’s see a dictionary nested inside a dictionary:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Dictionary nested inside a dictionary nested in side a dictionary</span>
+<span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s">'key1'</span><span class="p">:{</span><span class="s">'nestkey'</span><span class="p">:{</span><span class="s">'subnestkey'</span><span class="p">:</span><span class="s">'value'</span><span class="p">}}}</span>
+</code></pre>
+</div>
+
+<p>Wow! Thats a quite the inception of dictionaries! Let’s see how we can grab that value:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Keep calling the keys</span>
+<span class="n">d</span><span class="p">[</span><span class="s">'key1'</span><span class="p">][</span><span class="s">'nestkey'</span><span class="p">][</span><span class="s">'subnestkey'</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<p>Output: <code class="highlighter-rouge">'value'</code></p>
+
+<h2 id="a-few-dictionary-methods">A few Dictionary Methods</h2>
+<p>There are a few methods we can call on a dictionary. Let’s get a quick introduction to a few of them:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">30</span><span class="p">]:</span><span class="c"># Create a typical dictionary</span>
+<span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s">'key1'</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s">'key2'</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="s">'key3'</span><span class="p">:</span><span class="mi">3</span><span class="p">}</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">35</span><span class="p">]:</span><span class="c"># Method to return a list of all keys </span>
+<span class="n">d</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">35</span><span class="p">]:[</span><span class="s">'key3'</span><span class="p">,</span> <span class="s">'key2'</span><span class="p">,</span> <span class="s">'key1'</span><span class="p">]</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">36</span><span class="p">]:</span><span class="c"># Method to grab all values</span>
+<span class="n">d</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">36</span><span class="p">]:[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">33</span><span class="p">]:</span><span class="c"># Method to return tuples of all items  (we'll learn about tuples soon)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">33</span><span class="p">]:[(</span><span class="s">'key3'</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="s">'key2'</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s">'key1'</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span>
+</code></pre>
+</div>
+
+<p>Hopefully you now have a good basic understanding how to construct dictionaries. There’s a lot more to go into here, but we will revisit dictionaries at later time. After this section all you need to know is how to create a dictionary and how to retrieve values from it.</p>
+
+<h2 id="next-up-tuples"><a href="/python-tutorial/2016/12/26/tuples.html">Next Up Tuples!</a></h2>
+
+
+
+      <footer class="site-footer">
+  <span class="site-footer-owner"><a href="http://localhost:4000">Maddy's Blogs</a> is maintained by <a href="http://maddymaster.github.io">Maddy Anand</a>.</span>
+  <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+</footer>
+
+
+    </section>
+
+  </body>
+</html>

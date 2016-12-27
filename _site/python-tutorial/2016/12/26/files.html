@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  
+  <head>
+  <meta charset="UTF-8">
+  <title>Maddy's Blogs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#157878">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/cayman.css">
+</head>
+
+  <body>
+    <section class="page-header">
+  <h1 class="project-name">Maddy's Blogs</h1>
+  <h2 class="project-tagline">My Latest Blog Posts</h2>
+  <a href="#" class="btn">About Me</a>
+  <a href="/" class="btn">Home</a>
+  <a href="#" class="btn"> Connect on Linkedin </a>
+  <a href="#" class="btn"> Follow me on Twitter </a>
+</section>
+
+
+    <section class="main-content">
+      
+      <h2 id="files">Files</h2>
+
+<p>Python uses file objects to interact with external files on your computer. These file objects can be any sort of file you have on your computer, whether it be an audio file, a text file, emails, Excel documents, etc. Note: You will probably need to install certain libraries or modules to interact with those various file types, but they are easily available. (We will cover downloading modules later on in the course).</p>
+
+<p>Python has a built-in open function that allows us to open and play with basic file types. First we will need a file though. We’re going to use some iPython magic to create a text file!</p>
+
+<h3 id="ipython-writing-a-file">iPython Writing a File</h3>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="o">%%</span><span class="n">writefile</span> <span class="n">test</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">Hello</span><span class="p">,</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">quick</span> <span class="n">test</span> <span class="nb">file</span>
+</code></pre>
+</div>
+<p><code class="highlighter-rouge">Overwriting test.txt</code></p>
+
+<h3 id="python-opening-a-file">Python Opening a file</h3>
+<p>We can open a file with the <code class="highlighter-rouge">open()</code> function. The open function also takes in arguments (also called parameters). Lets see how this is used:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">14</span><span class="p">]:</span><span class="c"># Open the text.txt we made earlier</span>
+<span class="n">my_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'test.txt'</span><span class="p">)</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">15</span><span class="p">]:</span><span class="c"># We can now read the file</span>
+<span class="n">my_file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">15</span><span class="p">]:</span><span class="s">'Hello, this is a quick test file'</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">16</span><span class="p">]:</span>
+<span class="c"># But what happens if we try to read it again?</span>
+<span class="n">my_file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">16</span><span class="p">]:</span><span class="s">''</span>
+<span class="sb">``</span>
+<span class="n">This</span> <span class="n">happens</span> <span class="n">because</span> <span class="n">you</span> <span class="n">can</span> <span class="n">imagine</span> <span class="n">the</span> <span class="n">reading</span> <span class="s">"cursor"</span> <span class="ow">is</span> <span class="n">at</span> <span class="n">the</span> <span class="n">end</span> <span class="n">of</span> <span class="n">the</span> <span class="nb">file</span> <span class="n">after</span> <span class="n">having</span> <span class="n">read</span> <span class="n">it</span><span class="o">.</span> <span class="n">So</span> <span class="n">there</span> <span class="ow">is</span> <span class="n">nothing</span> <span class="n">left</span> <span class="n">to</span> <span class="n">read</span><span class="o">.</span> <span class="n">We</span> <span class="n">can</span> <span class="n">reset</span> <span class="n">the</span> <span class="s">"cursor"</span> <span class="n">like</span> <span class="n">this</span><span class="p">:</span>
+
+<span class="sb">``</span><span class="err">`</span><span class="n">python</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">42</span><span class="p">]:</span><span class="c"># Seek to the start of file (index 0)</span>
+<span class="n">my_file</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">19</span><span class="p">]:</span>
+<span class="c"># Now read again</span>
+<span class="n">my_file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">19</span><span class="p">]:</span>
+<span class="s">'Hello, this is a quick test file'</span>
+</code></pre>
+</div>
+
+<p>In order to not have to reset every time, we can also use the readlines method. Use caution with large files, since everything will be held in memory. We will learn how to iterate over large files later in the course.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">26</span><span class="p">]:</span>
+<span class="c"># Readlines returns a list of the lines in the file.</span>
+<span class="n">my_file</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">26</span><span class="p">]:[</span><span class="s">'Hello, this is a quick test file'</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<h2 id="writing-to-a-file">Writing to a File</h2>
+<p>By default, using the open() function will only allow us to read the file, we need to pass the argument ‘w’ to write over the file. For example:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">39</span><span class="p">]:</span>
+<span class="c"># Add a second argument to the function, 'w' which stands for write</span>
+<span class="n">my_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'test.txt'</span><span class="p">,</span><span class="s">'w+'</span><span class="p">)</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">40</span><span class="p">]:</span><span class="c"># Write to the file</span>
+<span class="n">my_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">'This is a new line'</span><span class="p">)</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">43</span><span class="p">]:</span><span class="c"># Read the file</span>
+<span class="n">my_file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">43</span><span class="p">]:</span><span class="s">'This is a new line'</span>
+</code></pre>
+</div>
+
+<h2 id="iterating-through-a-file">Iterating through a File</h2>
+<p>Lets get a quick preview of a for loop by iterating over a text file. First let’s make a new text file with some iPython Magic:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">44</span><span class="p">]:</span>
+<span class="o">%%</span><span class="n">writefile</span> <span class="n">test</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">First</span> <span class="n">Line</span>
+<span class="n">Second</span> <span class="n">Line</span>
+</code></pre>
+</div>
+<p><code class="highlighter-rouge">Overwriting test.txt</code></p>
+
+<p>Now we can use a little bit of flow to tell the program to for through every line of the file and do something:</p>
+
+<p><code class="highlighter-rouge">python
+In [45]:
+for line in open('test.txt'):
+    print line
+   </code>
+<code class="highlighter-rouge">First Line</code></p>
+
+<p><code class="highlighter-rouge">Second Line</code></p>
+
+<p>Don’t worry about fully understanding this yet, for loops are coming up soon. But we’ll break down what we did above. We said that for every line in this text file, go ahead and print that line. Its important to note a few things here:</p>
+
+<ol>
+  <li>We could have called the ‘line’ object anything (see example below).</li>
+  <li>By not calling .read() on the file, the whole text file was not stored in memory.</li>
+  <li>Notice the indent on the second line for print. This whitespace is required in Python.</li>
+</ol>
+
+<p>We’ll learn a lot more about this later, but up next: Sets and Booleans!
+```python
+In [46]:</p>
+<h1 id="pertaining-to-the-first-point-above">Pertaining to the first point above</h1>
+<p>for asdf in open(‘test.txt’):
+    print asdf
+    ```</p>
+
+<p><code class="highlighter-rouge">First Line</code></p>
+
+<p><code class="highlighter-rouge">Second Line</code></p>
+
+<h2 id="next-up-sets-and-booleans">Next Up Sets and Booleans</h2>
+
+
+      <footer class="site-footer">
+  <span class="site-footer-owner"><a href="http://localhost:4000">Maddy's Blogs</a> is maintained by <a href="http://maddymaster.github.io">Maddy Anand</a>.</span>
+  <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+</footer>
+
+
+    </section>
+
+  </body>
+</html>

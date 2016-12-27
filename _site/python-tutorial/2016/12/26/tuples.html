@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  
+  <head>
+  <meta charset="UTF-8">
+  <title>Maddy's Blogs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#157878">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/cayman.css">
+</head>
+
+  <body>
+    <section class="page-header">
+  <h1 class="project-name">Maddy's Blogs</h1>
+  <h2 class="project-tagline">My Latest Blog Posts</h2>
+  <a href="#" class="btn">About Me</a>
+  <a href="/" class="btn">Home</a>
+  <a href="#" class="btn"> Connect on Linkedin </a>
+  <a href="#" class="btn"> Follow me on Twitter </a>
+</section>
+
+
+    <section class="main-content">
+      
+      <h1 id="tuples">Tuples</h1>
+<p>In Python tuples are very similar to lists, however, unlike lists they are immutable meaning they can not be changed. You would use tuples to present things that shouldn’t be changed, such as days of the week, or dates on a calendar.</p>
+
+<p>In this section, we will get a brief overview of the following:</p>
+
+<ol>
+  <li>Constructing Tuples</li>
+  <li>Basic Tuple Methods</li>
+  <li>Immutability</li>
+  <li>When to Use Tuples.</li>
+</ol>
+
+<p>You’ll have an intuition of how to use tuples based on what you’ve learned about lists. We can treat them very similarly with the major distinction being that tuples are immutable.</p>
+
+<h2 id="constructing-tuples">Constructing Tuples</h2>
+
+<p>The construction of a tuples use () with elements separated by commas. For example:</p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Can create a tuple with mixed types</span>
+<span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Check len just like a list</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>Output: <code class="highlighter-rouge">3</code></p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Can also mix object types</span>
+<span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="s">'one'</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="c"># Show</span>
+<span class="n">t</span>
+</code></pre>
+</div>
+<p>Output: <code class="highlighter-rouge">('one', 2)</code></p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Use indexing just like we did in lists</span>
+<span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</code></pre>
+</div>
+<p>Output: <code class="highlighter-rouge">'one'</code></p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Slicing just like a list</span>
+<span class="n">t</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</code></pre>
+</div>
+<p>Output: <code class="highlighter-rouge">2</code></p>
+
+<p>##Basic Tuple Methods</p>
+
+<p>Tuples have built-in methods, but not as many as lists do. Lets look at two of them:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">12</span><span class="p">]:</span>
+<span class="c"># Use .index to enter a value and return the index</span>
+<span class="n">t</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s">'one'</span><span class="p">)</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">12</span><span class="p">]:</span><span class="mi">0</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">13</span><span class="p">]:</span><span class="c"># Use .count to count the number of times a value appears</span>
+<span class="n">t</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">'one'</span><span class="p">)</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">13</span><span class="p">]:</span><span class="mi">1</span>
+</code></pre>
+</div>
+
+<h2 id="immutability">Immutability</h2>
+<p>It can’t be stressed enough that tuples are immutable. To drive that point home:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span> <span class="s">'change'</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">---------------------------------------------------------------------------</span>
+<span class="nb">TypeError</span>                                 <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">14</span><span class="o">-</span><span class="mi">93</span><span class="n">def5f9b4bd</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span><span class="p">()</span>
+<span class="o">----&gt;</span> <span class="mi">1</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span> <span class="s">'change'</span>
+
+<span class="nb">TypeError</span><span class="p">:</span> <span class="s">'tuple'</span> <span class="nb">object</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">support</span> <span class="n">item</span> <span class="n">assignment</span>
+<span class="n">Because</span> <span class="n">of</span> <span class="n">this</span> <span class="n">immutability</span><span class="p">,</span> <span class="n">tuples</span> <span class="n">can</span><span class="s">'t grow. Once a tuple is made we can not add to it.</span><span class="err">
+</span></code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">t</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">'nope'</span><span class="p">)</span>
+<span class="o">---------------------------------------------------------------------------</span>
+<span class="nb">AttributeError</span>                            <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">15</span><span class="o">-</span><span class="mi">799</span><span class="n">b3447c4d9</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span><span class="p">()</span>
+<span class="o">----&gt;</span> <span class="mi">1</span> <span class="n">t</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">'nope'</span><span class="p">)</span>
+
+<span class="nb">AttributeError</span><span class="p">:</span> <span class="s">'tuple'</span> <span class="nb">object</span> <span class="n">has</span> <span class="n">no</span> <span class="n">attribute</span> <span class="s">'append'</span>
+</code></pre>
+</div>
+
+<h2 id="when-to-use-tuples">When to use Tuples</h2>
+
+<p>You may be wondering, “Why bother using tuples when they have fewer available methods?” To be honest, tuples are not used as often as lists in programming, but are used when immutability is necessary. If in your program you are passing around an object and need to make sure it does not get changed, then tuple become your solution. It provides a convenient source of data integrity.</p>
+
+<p>You should now be able to create and use tuples in your programming as well as have an understanding of their immutability.</p>
+
+<h2 id="up-next-files"><a href="/python-tutorial/2016/12/26/files.html">Up next Files!</a></h2>
+
+
+
+      <footer class="site-footer">
+  <span class="site-footer-owner"><a href="http://localhost:4000">Maddy's Blogs</a> is maintained by <a href="http://maddymaster.github.io">Maddy Anand</a>.</span>
+  <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+</footer>
+
+
+    </section>
+
+  </body>
+</html>

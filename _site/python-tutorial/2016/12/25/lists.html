@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  
+  <head>
+  <meta charset="UTF-8">
+  <title>Maddy's Blogs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#157878">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/cayman.css">
+</head>
+
+  <body>
+    <section class="page-header">
+  <h1 class="project-name">Maddy's Blogs</h1>
+  <h2 class="project-tagline">My Latest Blog Posts</h2>
+  <a href="#" class="btn">About Me</a>
+  <a href="/" class="btn">Home</a>
+  <a href="#" class="btn"> Connect on Linkedin </a>
+  <a href="#" class="btn"> Follow me on Twitter </a>
+</section>
+
+
+    <section class="main-content">
+      
+      <h1 id="lists">Lists</h1>
+
+<p>Earlier when discussing strings we introduced the concept of a sequence in Python. Lists can be thought of the most general version of a sequence in Python. Unlike strings, they are mutable, meaning the elements inside a list can be changed!</p>
+
+<p>In this section we will learn about:</p>
+
+<ol>
+  <li>Creating lists</li>
+  <li>Indexing and Slicing Lists</li>
+  <li>Basic List Methods</li>
+  <li>Nesting Lists</li>
+  <li>Introduction to List Comprehensions</li>
+</ol>
+
+<p>Lists are constructed with brackets [] and commas separating every element in the list.</p>
+
+<p>Let’s go ahead and see how we can construct lists!</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Assign a list to an variable named my_list</span>
+<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<p>We just created a list of integers, but lists can actually hold different object types. For example:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s">'A string'</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mf">100.232</span><span class="p">,</span><span class="s">'o'</span><span class="p">]</span>
+</code></pre>
+</div>
+<p>Just like strings, the len() function will tell you how many items are in the sequence of the list.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="nb">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>Output: <code class="highlighter-rouge">4</code></p>
+
+<h2 id="indexing-and-slicing">Indexing and Slicing</h2>
+
+<p>Indexing and slicing works just like in strings. Let’s make a new list to remind ourselves of how this works:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s">'one'</span><span class="p">,</span><span class="s">'two'</span><span class="p">,</span><span class="s">'three'</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">10</span><span class="p">]:</span> <span class="c"># Grab element at index 0</span>
+<span class="n">my_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">10</span><span class="p">]:</span><span class="s">'one'</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">11</span><span class="p">]:</span> <span class="c"># Grab index 1 and everything past it</span>
+<span class="n">my_list</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">11</span><span class="p">]:[</span><span class="s">'two'</span><span class="p">,</span> <span class="s">'three'</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">13</span><span class="p">]:</span><span class="c"># Grab everything UP TO index 3</span>
+<span class="n">my_list</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">13</span><span class="p">]:[</span><span class="s">'one'</span><span class="p">,</span> <span class="s">'two'</span><span class="p">,</span> <span class="s">'three'</span><span class="p">]</span>
+</code></pre>
+</div>
+<p>We can also use + to concatenate lists, just like we did for strings.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">14</span><span class="p">]:</span> <span class="n">my_list</span> <span class="o">+</span> <span class="p">[</span><span class="s">'new item'</span><span class="p">]</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">14</span><span class="p">]:</span> <span class="p">[</span><span class="s">'one'</span><span class="p">,</span> <span class="s">'two'</span><span class="p">,</span> <span class="s">'three'</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s">'new item'</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<p>Note: This doesn’t actually change the original list!</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">15</span><span class="p">]:</span> <span class="n">my_list</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">15</span><span class="p">]:</span> <span class="p">[</span><span class="s">'one'</span><span class="p">,</span> <span class="s">'two'</span><span class="p">,</span> <span class="s">'three'</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span> 
+</code></pre>
+</div>
+<p>You would have to reassign the list to make the change permanent.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">16</span><span class="p">]:</span><span class="c"># Reassign</span>
+<span class="n">my_list</span> <span class="o">=</span> <span class="n">my_list</span> <span class="o">+</span> <span class="p">[</span><span class="s">'add new item permanently'</span><span class="p">]</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">18</span><span class="p">]:</span> <span class="n">my_list</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">18</span><span class="p">]:</span> <span class="p">[</span><span class="s">'one'</span><span class="p">,</span> <span class="s">'two'</span><span class="p">,</span> <span class="s">'three'</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s">'add new item permanently'</span><span class="p">]</span>
+</code></pre>
+</div>
+<p>We can also use the * for a duplication method similar to strings:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">20</span><span class="p">]:</span>
+<span class="c"># Make the list double</span>
+<span class="n">my_list</span> <span class="o">*</span> <span class="mi">2</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">20</span><span class="p">]:[</span><span class="s">'one'</span><span class="p">,</span><span class="s">'two'</span><span class="p">,</span><span class="s">'three'</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s">'add new item permanently'</span><span class="p">,</span><span class="s">'one'</span><span class="p">,</span> <span class="s">'two'</span><span class="p">,</span> <span class="s">'three'</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span><span class="s">'add new item permanently'</span><span class="p">]</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">23</span><span class="p">]:</span>
+<span class="c"># Again doubling not permanent</span>
+<span class="n">my_list</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">23</span><span class="p">]:</span> <span class="p">[</span><span class="s">'one'</span><span class="p">,</span> <span class="s">'two'</span><span class="p">,</span> <span class="s">'three'</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s">'add new item permanently'</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<h2 id="basic-list-methods">Basic List Methods</h2>
+
+<p>If you are familiar with another programming language, you might start to draw parallels between arrays in another language and lists in Python. Lists in Python however, tend to be more flexible than arrays in other languages for a two good reasons: they have no fixed size (meaning we don’t have to specify how big a list will be), and they have no fixed type constraint (like we’ve seen above).</p>
+
+<p>Let’s go ahead and explore some more special methods for lists:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Create a new list</span>
+<span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+</code></pre>
+</div>
+<p>Use the append method to permanently add an item to the end of a list:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Append</span>
+<span class="n">l</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">'append me!'</span><span class="p">)</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Show</span>
+<span class="n">l</span>
+</code></pre>
+</div>
+
+<p>Output: <code class="highlighter-rouge">[1, 2, 3, 'append me!']</code></p>
+
+<p>Use pop to “pop off” an item from the list. By default pop takes off the last index, but you can also specify which index to pop off. Let’s see an example:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Pop off the 0 indexed item</span>
+<span class="n">l</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>Output: <code class="highlighter-rouge">1</code></p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Show</span>
+<span class="n">l</span>
+</code></pre>
+</div>
+<p>Output: <code class="highlighter-rouge">[2, 3, 'append me!']</code></p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Assign the popped element, remember default popped index is -1</span>
+<span class="n">popped_item</span> <span class="o">=</span> <span class="n">l</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+</code></pre>
+</div>
+
+<p>And then when you input</p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">popped_item</span> 
+</code></pre>
+</div>
+<p>You get an output: <code class="highlighter-rouge">'append me!'</code></p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Show remaining list</span>
+<span class="n">l</span>
+</code></pre>
+</div>
+<p>Output: <code class="highlighter-rouge">[2, 3]</code></p>
+
+<p>It should also be noted that lists indexing will return an error if there is no element at that index. For example:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">l</span><span class="p">[</span><span class="mi">100</span><span class="p">]</span>
+</code></pre>
+</div>
+<p>Output:</p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">---------------------------------------------------------------------------</span>
+<span class="nb">IndexError</span>                                <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">50</span><span class="o">-</span><span class="mf">3e7</span><span class="n">ce3111e95</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span><span class="p">()</span>
+<span class="o">----&gt;</span> <span class="mi">1</span> <span class="n">l</span><span class="p">[</span><span class="mi">100</span><span class="p">]</span>
+
+<span class="nb">IndexError</span><span class="p">:</span> <span class="nb">list</span> <span class="n">index</span> <span class="n">out</span> <span class="n">of</span> <span class="nb">range</span> 
+</code></pre>
+</div>
+
+<p>We can use the sort method and the reverse methods to also effect your lists:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">new_list</span> <span class="o">=</span> <span class="p">[</span><span class="s">'a'</span><span class="p">,</span><span class="s">'e'</span><span class="p">,</span><span class="s">'x'</span><span class="p">,</span><span class="s">'b'</span><span class="p">,</span><span class="s">'c'</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c">#Show</span>
+<span class="n">new_list</span>
+</code></pre>
+</div>
+
+<p>Output: <code class="highlighter-rouge">['a', 'e', 'x', 'b', 'c']</code></p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Use reverse to reverse order (this is permanent!)</span>
+<span class="n">new_list</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">new_list</span>
+</code></pre>
+</div>
+
+<p>Output: <code class="highlighter-rouge">['c', 'b', 'x', 'e', 'a']</code></p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Use sort to sort the list (in this case alphabetical order, but for numbers it will go ascending)</span>
+<span class="n">new_list</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">new_list</span>
+</code></pre>
+</div>
+
+<p>Output: <code class="highlighter-rouge">['a', 'b', 'c', 'e', 'x']</code></p>
+
+<h2 id="nesting-lists">Nesting Lists</h2>
+<p>A great feature of of Python data structures is that they support nesting. This means we can have data structures within data structures. For example: A list inside a list.</p>
+
+<p>Let’s see how this works!</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Let's make three lists</span>
+<span class="n">lst_1</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">lst_2</span><span class="o">=</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+<span class="n">lst_3</span><span class="o">=</span><span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
+
+<span class="c"># Make a list of lists to form a matrix</span>
+<span class="n">matrix</span> <span class="o">=</span> <span class="p">[</span><span class="n">lst_1</span><span class="p">,</span><span class="n">lst_2</span><span class="p">,</span><span class="n">lst_3</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Show</span>
+<span class="n">matrix</span>
+</code></pre>
+</div>
+<p>Output: <code class="highlighter-rouge">[[1, 2, 3], [4, 5, 6], [7, 8, 9]]</code></p>
+
+<p>Now we can again use indexing to grab elements, but now there are two levels for the index. The items in the matrix object, and then the items inside that list!</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Grab first item in matrix object</span>
+<span class="n">matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</code></pre>
+</div>
+<p>Output: <code class="highlighter-rouge">[1, 2, 3]</code></p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Grab first item of the first item in the matrix object</span>
+<span class="n">matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+</code></pre>
+</div>
+<p>Output: <code class="highlighter-rouge">l</code></p>
+
+<p>##List Comprehensions</p>
+
+<p>Python has an advanced feature called list comprehensions. They allow for quick construction of lists. To fully understand list comprehensions we need to understand for loops. So don’t worry if you don’t completely understand this section, and feel free to just skip it since we will return to this topic later.</p>
+
+<p>But in case you want to know now, here are a few examples!</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Build a list comprehension by deconstructing a for loop within a []</span>
+<span class="n">first_col</span> <span class="o">=</span> <span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">matrix</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">first_col</span>
+</code></pre>
+</div>
+
+<p>Output: <code class="highlighter-rouge">[1, 4, 7]</code></p>
+
+<p>We used list comprehension here to grab the first element of every row in the matrix object. We will cover this in much more detail later on!</p>
+
+<h2 id="next-up-numbers"><a href="/python-tutorial/2016/12/26/numbers.html">Next up Numbers!</a></h2>
+
+
+
+      <footer class="site-footer">
+  <span class="site-footer-owner"><a href="http://localhost:4000">Maddy's Blogs</a> is maintained by <a href="http://maddymaster.github.io">Maddy Anand</a>.</span>
+  <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+</footer>
+
+
+    </section>
+
+  </body>
+</html>
