@@ -15,7 +15,9 @@ I will also try to provide visuals along with code snippets and I hope to publis
 I know this is slow, but, this is all the time I got. Follow my blog topics in the following order. (Some may not exist as I haven't blogged them yet)
 
 # Table of Contents
+
 ## Learn the Basics of Python
+
 * [Strings](/main/2016/12/25/strings.html)
 * [Numbers](/python-tutorial/2016/12/26/numbers.html)
 * [Lists](/python-tutorial/2016/12/25/lists.html)
