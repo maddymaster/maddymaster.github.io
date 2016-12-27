@@ -1,8 +1,8 @@
 ---
 layout: default
 title:  "Learning Python"
-date:   2016-12-25 17:50:00
-categories: main
+date:   2016-12-24 17:50:00
+categories: Python-Tutorial
 ---
 # Python Tutorial
 
@@ -16,34 +16,48 @@ I know this is slow, but, this is all the time I got. Follow my blog topics in t
 
 # Table of Contents
 ## Learn the Basics of Python
-* Strings
-* Variables and Types
-* Lists
-* Basic Operators
-* String Formatting
-* Basic String Operations
-* Conditions
-* Loops
+* [Strings](/main/2016/12/25/strings.html)
+* [Numbers](/python-tutorial/2016/12/26/numbers.html)
+* [Lists](/python-tutorial/2016/12/25/lists.html)
+* [Tuples](/python-tutorial/2016/12/26/tuples.html)
+* [Files](/python-tutorial/2016/12/26/files.html)
+* Sets and Booleans
+* Comparison Operators
+* Chained Comparison Operators
+* Python Statements - if, elif, and else Statements
+* For and While Loops
+* Range ()
+* List Comprehensions
+* Methods
 * Functions
-* Classes and Objects
-* Dictionaries
-* Modules and Packages
+* Lambda Expressions
+* Nested Statements and Scope
+* Object Oriented Programming
+* Objects
+* Classes
+* Methods
+* Inheritance
+* Special Methods
+* Errors and Exception Handling
+* Exception Handling - Try, Except and Finally
+* Modules and Packages (and imports)
+* Built in Functions - Map, Reduce, Filter, Zip, Enumerate, all(), any(), Complex
+* Python Decorators
+* Python Generators
+
 
 ## Python Data Science Tutorials
 * Numpy Arrays
 * Pandas Basics
-* Advanced Tutorials
+* Advanced Modules: Counter, defaultdict, Ordereddict, namedtuple
 * Generators
 * List Comprehensions
 * Multiple Function Arguments
 * Regular Expressions
-* Exception Handling
-* Sets
+* Python Debugger - pdb
+* Timing your code - timeit
 * Serialization
-* Partial functions
-* Code Introspection
-* Closures
-* Decorators
+* GUI - Interact, Widget Basics
 
 I will add some visual explanations on concepts of Programming as well. For ex: Object Oriented Programming, OOP Design, Data Structures, I/O etc., 
 
