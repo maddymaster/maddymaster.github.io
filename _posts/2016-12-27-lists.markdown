@@ -173,8 +173,8 @@ It should also be noted that lists indexing will return an error if there is no 
 ```python
 l[100]
 ```
-Output: 
 ```python
+Output: 
 ---------------------------------------------------------------------------
 IndexError                                Traceback (most recent call last)
 <ipython-input-50-3e7ce3111e95> in <module>()
