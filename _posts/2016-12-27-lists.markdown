@@ -174,7 +174,7 @@ It should also be noted that lists indexing will return an error if there is no 
 l[100]
 ```
 Output: 
-```python s
+```python
 ---------------------------------------------------------------------------
 IndexError                                Traceback (most recent call last)
 <ipython-input-50-3e7ce3111e95> in <module>()
