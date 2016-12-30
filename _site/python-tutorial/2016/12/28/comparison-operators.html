@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  
+  <head>
+  <meta charset="UTF-8">
+  <title>Maddy's Blogs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#157878">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/cayman.css">
+</head>
+
+  <body>
+    <section class="page-header">
+  <h1 class="project-name">Maddy's Blogs</h1>
+  <h2 class="project-tagline">My Latest Blog Posts</h2>
+  <a href="#" class="btn">About Me</a>
+  <a href="/" class="btn">Home</a>
+  <a href="#" class="btn"> Product Development </a>
+  <a href="#" class="btn"> Tools & DevOps </a>
+</section>
+
+
+    <section class="main-content">
+      
+      <h1 id="comparison-operators">Comparison Operators</h1>
+<p>In this lecture we will be learning about Comparison Operators in Python. These operators will allow us to compare variables and output a Boolean value (True or False).</p>
+
+<p>If you have any sort of background in Math, these operators should be very straight forward.</p>
+
+<p>First we’ll present a table of the comparison operators and then work through some examples:</p>
+
+<h1 id="table-of-comparison-operators">Table of Comparison Operators</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Description</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>==</td>
+      <td>If the values of two operands are equal, then the condition becomes true.</td>
+      <td>(a == b) is not true.</td>
+    </tr>
+    <tr>
+      <td>!=</td>
+      <td>If values of two operands are not equal, then condition becomes true.</td>
+      <td>(a != b) is true</td>
+    </tr>
+    <tr>
+      <td>&lt;&gt;</td>
+      <td>If values of two operands are not equal, then condition becomes true.</td>
+      <td>(a &lt;&gt; b) is true. This is similar to != operator.</td>
+    </tr>
+    <tr>
+      <td>&gt;</td>
+      <td>If the value of left operand is greater than the value of right operand, then condition becomes true.</td>
+      <td>(a &gt; b) is not true.</td>
+    </tr>
+    <tr>
+      <td>&lt;</td>
+      <td>If the value of left operand is less than the value of right operand, then condition becomes true.</td>
+      <td>(a &lt; b) is true.</td>
+    </tr>
+    <tr>
+      <td>&gt;=</td>
+      <td>If the value of left operand is greater than or equal to the value of right operand, then condition becomes true.</td>
+      <td>(a &gt;= b) is not true.</td>
+    </tr>
+    <tr>
+      <td>&lt;=</td>
+      <td>If the value of left operand is less than or equal to the value of right operand, then condition becomes true.</td>
+      <td>(a &lt;= b) is true.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Let’s now work through quick examples of each of these.</p>
+
+<h2 id="equal">Equal</h2>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">2</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="bp">True</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">0</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="bp">False</span>
+<span class="n">Not</span> <span class="n">Equal</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">1</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="bp">True</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">2</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="bp">False</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">7</span><span class="p">]:</span> <span class="mi">2</span> <span class="o">&lt;&gt;</span> <span class="mi">1</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">7</span><span class="p">]:</span> <span class="bp">True</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">8</span><span class="p">]:</span> <span class="mi">2</span> <span class="o">&lt;&gt;</span> <span class="mi">2</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">8</span><span class="p">]:</span> <span class="bp">False</span>
+<span class="n">Greater</span> <span class="n">Than</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">9</span><span class="p">]:</span> <span class="mi">2</span> <span class="o">&gt;</span> <span class="mi">1</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">9</span><span class="p">]:</span><span class="bp">True</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">10</span><span class="p">]:</span><span class="mi">2</span> <span class="o">&gt;</span> <span class="mi">4</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">10</span><span class="p">]:</span><span class="bp">False</span>
+<span class="n">Less</span> <span class="n">Than</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">11</span><span class="p">]:</span><span class="mi">2</span> <span class="o">&lt;</span> <span class="mi">4</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">11</span><span class="p">]:</span><span class="bp">True</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">12</span><span class="p">]:</span><span class="mi">2</span> <span class="o">&lt;</span> <span class="mi">1</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">12</span><span class="p">]:</span><span class="bp">False</span>
+<span class="n">Greater</span> <span class="n">Than</span> <span class="ow">or</span> <span class="n">Equal</span> <span class="n">to</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">13</span><span class="p">]:</span><span class="mi">2</span> <span class="o">&gt;=</span> <span class="mi">2</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">13</span><span class="p">]:</span><span class="bp">True</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">14</span><span class="p">]:</span><span class="mi">2</span> <span class="o">&gt;=</span> <span class="mi">1</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">14</span><span class="p">]:</span><span class="bp">True</span>
+<span class="n">Less</span> <span class="n">than</span> <span class="ow">or</span> <span class="n">Equal</span> <span class="n">to</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">15</span><span class="p">]:</span><span class="mi">2</span> <span class="o">&lt;=</span> <span class="mi">2</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">15</span><span class="p">]:</span><span class="bp">True</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">16</span><span class="p">]:</span><span class="mi">2</span> <span class="o">&lt;=</span> <span class="mi">4</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">16</span><span class="p">]:</span><span class="bp">True</span>
+</code></pre>
+</div>
+
+<h3 id="great-go-over-each-comparison-operator-to-make-sure-you-understand-what-each-one-is-saying-but-hopefully-this-was-straightforward-for-you">Great! Go over each comparison operator to make sure you understand what each one is saying. But hopefully this was straightforward for you</h3>
+
+<h4 id="next-we-will-cover-chained-comparison-operators">Next we will cover <a href="python-tutorial/2016/12/29/chained-comparison-operators.html">chained comparison operators</a></h4>
+
+
+      <footer class="site-footer">
+  <span class="site-footer-owner"><a href="http://localhost:4000">Maddy's Blogs</a> is maintained by <a href="http://maddymaster.github.io">Maddy Anand</a>.</span>
+  <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+</footer>
+
+
+    </section>
+
+  </body>
+</html>

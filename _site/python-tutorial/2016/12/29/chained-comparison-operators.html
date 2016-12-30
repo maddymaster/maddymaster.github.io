@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  
+  <head>
+  <meta charset="UTF-8">
+  <title>Maddy's Blogs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#157878">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/cayman.css">
+</head>
+
+  <body>
+    <section class="page-header">
+  <h1 class="project-name">Maddy's Blogs</h1>
+  <h2 class="project-tagline">My Latest Blog Posts</h2>
+  <a href="#" class="btn">About Me</a>
+  <a href="/" class="btn">Home</a>
+  <a href="#" class="btn"> Product Development </a>
+  <a href="#" class="btn"> Tools & DevOps </a>
+</section>
+
+
+    <section class="main-content">
+      
+      <h1 id="chained-comparison-operators">Chained Comparison Operators</h1>
+<p>An interesting feature of Python is the ability to chain multiple comparisons to perform a more complex test. You can use these chained comparisons as a shorthand for larger Boolean Expressions.</p>
+
+<p>In this lecture we will learn how to chain comparison operators and we will also introduce two other important statements in python: and and or.</p>
+
+<p>Let’s look at a few examples of using chains:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="o">&lt;</span> <span class="mi">3</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="bp">True</span>
+</code></pre>
+</div>
+
+<p>The above statement check if 1 was less than 2 and if 2 was less than 3. We could have written this using an and statement in Python:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span><span class="mi">1</span><span class="o">&lt;</span><span class="mi">2</span> <span class="ow">and</span> <span class="mi">2</span><span class="o">&lt;</span><span class="mi">3</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span><span class="bp">True</span>
+</code></pre>
+</div>
+
+<p>The and is used to make sure two checks have to be true in order for the total check to be true. Let’s see another example:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">2</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span><span class="bp">True</span>
+</code></pre>
+</div>
+
+<p>The above checks if 3 is larger than both the other numbers, so you could use and to rewrite it as:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="mi">1</span><span class="o">&lt;</span><span class="mi">3</span> <span class="ow">and</span> <span class="mi">3</span><span class="o">&gt;</span><span class="mi">2</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="bp">True</span>
+</code></pre>
+</div>
+<p>Its important to note that Python is checking both instances of the comparisons. We can also use or to write comparisons in Python. For example:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="mi">1</span><span class="o">==</span><span class="mi">2</span> <span class="ow">or</span> <span class="mi">2</span><span class="o">&lt;</span><span class="mi">3</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="bp">True</span>
+</code></pre>
+</div>
+
+<p>Note how it was true, this is because with the or operator, we only need one or the other two be true. Let’s see one more example to drive this home:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="mi">1</span><span class="o">==</span><span class="mi">1</span> <span class="ow">or</span> <span class="mi">100</span><span class="o">==</span><span class="mi">1</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="bp">True</span>
+</code></pre>
+</div>
+
+<p>Great! For an overview of this quick lesson: You should have a comfortable understanding of using and and or statements as well as reading chained comparison code.</p>
+
+
+      <footer class="site-footer">
+  <span class="site-footer-owner"><a href="http://localhost:4000">Maddy's Blogs</a> is maintained by <a href="http://maddymaster.github.io">Maddy Anand</a>.</span>
+  <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+</footer>
+
+
+    </section>
+
+  </body>
+</html>
