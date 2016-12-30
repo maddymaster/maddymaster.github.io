@@ -6,7 +6,7 @@ categories: Python-Tutorial
 ---
 # Python Tutorial
 
-Hello and welcome to my blog. Although I want to I want to first cover some important tutorials on `python` basics and then include some advanced versions. I intend to help those who are beginners in programming and also cater to advanced programmers who want to learn Python.
+Hello and welcome to my blog. Although I want do blog about a lot of things, to start with; I intend to first cover some important tutorials on `python` basics and then include some advanced versions. I intend to help those who are beginners in programming and also cater to advanced programmers who want to learn Python.
 
 I practice a teaching method that focuses on Logic and Purpose first and then its application and use. That way we know what and why we are learning a particular lesson and then focus on where it can be applied. This helps understand topics deeper and remember for a long time.
 
