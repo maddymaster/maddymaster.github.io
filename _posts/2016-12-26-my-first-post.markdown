@@ -28,8 +28,8 @@ I know this is slow, but, this is all the time I got. Follow my blog topics in t
 * [Chained Comparison Operators](/python-tutorial/2016/12/29/chained-comparison-operators.html)
 * [Python Statements - Introduction to Python Statements](/python-tutorial/2016/12/29/python-statements-intro.html)
 * [Python Statements - if, elif, and else Statements](/python-tutorial/2016/12/29/python-statements2.html)
-* For and While Loops
-* Range ()
+* [For and While Loops](python-tutorial/2016/12/30/while-loop.html)
+* [Range()](/python-tutorial/2016/12/31/range.html)
 * List Comprehensions
 * Methods
 * Functions
@@ -63,3 +63,5 @@ I know this is slow, but, this is all the time I got. Follow my blog topics in t
 I will add some visual explanations on concepts of Programming as well. For ex: Object Oriented Programming, OOP Design, Data Structures, I/O etc., 
 
 Please follow on and let me know of any feedback. 
+
+Lets get started with [Installing Python](/python-tutorial/2016/12/25/python-install.html)

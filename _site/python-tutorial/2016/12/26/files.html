@@ -58,11 +58,12 @@
 </code></pre>
 </div>
 <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">16</span><span class="p">]:</span><span class="s">''</span>
-<span class="sb">``</span>
-<span class="n">This</span> <span class="n">happens</span> <span class="n">because</span> <span class="n">you</span> <span class="n">can</span> <span class="n">imagine</span> <span class="n">the</span> <span class="n">reading</span> <span class="s">"cursor"</span> <span class="ow">is</span> <span class="n">at</span> <span class="n">the</span> <span class="n">end</span> <span class="n">of</span> <span class="n">the</span> <span class="nb">file</span> <span class="n">after</span> <span class="n">having</span> <span class="n">read</span> <span class="n">it</span><span class="o">.</span> <span class="n">So</span> <span class="n">there</span> <span class="ow">is</span> <span class="n">nothing</span> <span class="n">left</span> <span class="n">to</span> <span class="n">read</span><span class="o">.</span> <span class="n">We</span> <span class="n">can</span> <span class="n">reset</span> <span class="n">the</span> <span class="s">"cursor"</span> <span class="n">like</span> <span class="n">this</span><span class="p">:</span>
+</code></pre>
+</div>
 
-<span class="sb">``</span><span class="err">`</span><span class="n">python</span>
-<span class="n">In</span> <span class="p">[</span><span class="mi">42</span><span class="p">]:</span><span class="c"># Seek to the start of file (index 0)</span>
+<p>This happens because you can imagine the reading “cursor” is at the end of the file after having read it. So there is nothing left to read. We can reset the “cursor” like this:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">42</span><span class="p">]:</span><span class="c"># Seek to the start of file (index 0)</span>
 <span class="n">my_file</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </code></pre>
 </div>

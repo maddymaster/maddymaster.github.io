@@ -40,7 +40,8 @@ my_file.read()
 ```
 ```python
 Out[16]:''
-``
+```
+
 This happens because you can imagine the reading "cursor" is at the end of the file after having read it. So there is nothing left to read. We can reset the "cursor" like this:
 
 ```python

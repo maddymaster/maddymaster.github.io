@@ -50,7 +50,7 @@ t[-1]
 Output: `2`
 
 
-##Basic Tuple Methods
+## Basic Tuple Methods
 
 Tuples have built-in methods, but not as many as lists do. Lets look at two of them:
 

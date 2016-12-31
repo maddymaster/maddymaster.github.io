@@ -118,6 +118,6 @@ In [16]:2 <= 4
 Out[16]:True
 ```
 
-### Great! Go over each comparison operator to make sure you understand what each one is saying. But hopefully this was straightforward for you
+ Great! Go over each comparison operator to make sure you understand what each one is saying. But hopefully this was straightforward for you
 
-#### Next we will cover [chained comparison operators](python-tutorial/2016/12/29/chained-comparison-operators.html)
+## Next we will cover [chained comparison operators](python-tutorial/2016/12/29/chained-comparison-operators.html)

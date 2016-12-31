@@ -111,4 +111,4 @@ b = None
 ```
 Thats it! You should now have a basic understanding of Python objects and data structure types.
 
-## Next Up Comparison Operators
+## [Next Up Comparison Operators](/python-tutorial/2016/12/28/comparison-operators.html)

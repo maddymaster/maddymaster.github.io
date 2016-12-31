@@ -332,7 +332,7 @@ Output: `'Insert another string with curly brackets: The inserted string'`
 
 We will revisit this string formatting topic in later sections when we are building our projects!
 
-## [Next up: Lists!](python-tutorial/2016/12/25/lists.html)
+## [Next up: Lists!](/python-tutorial/2016/12/25/lists.html)
 
 
 
