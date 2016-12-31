@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  
+  <head>
+  <meta charset="UTF-8">
+  <title>Maddy's Blogs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#157878">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/cayman.css">
+</head>
+
+  <body>
+    <section class="page-header">
+  <h1 class="project-name">Maddy's Blogs</h1>
+  <h2 class="project-tagline">My Latest Blog Posts</h2>
+  <a href="#" class="btn">About Me</a>
+  <a href="/" class="btn">Home</a>
+  <a href="#" class="btn"> Product Development </a>
+  <a href="#" class="btn"> Tools & DevOps </a>
+</section>
+
+
+    <section class="main-content">
+      
+      <h2 id="for-loops">for Loops</h2>
+<p>A for loop acts as an iterator in Python, it goes through items that are in a sequence or any other iterable item. Objects that we’ve learned about that we can iterate over include strings,lists,tuples, and even built in iterables for dictionaries, such as the keys or values.</p>
+
+<p>We’ve already seen the for statement a little bit in past lectures but now lets formalize our understanding.</p>
+
+<p>Here’s the general format for a for loop in Python:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">object</span><span class="p">:</span>
+    <span class="n">statements</span> <span class="n">to</span> <span class="n">do</span> <span class="n">stuff</span>
+    <span class="sb">``</span><span class="err">`</span>
+
+<span class="n">The</span> <span class="n">variable</span> <span class="n">name</span> <span class="n">used</span> <span class="k">for</span> <span class="n">the</span> <span class="n">item</span> <span class="ow">is</span> <span class="n">completely</span> <span class="n">up</span> <span class="n">to</span> <span class="n">the</span> <span class="n">coder</span><span class="p">,</span> <span class="n">so</span> <span class="n">use</span> <span class="n">your</span> <span class="n">best</span> <span class="n">judgment</span> <span class="k">for</span> <span class="n">choosing</span> <span class="n">a</span> <span class="n">name</span> <span class="n">that</span> <span class="n">makes</span> <span class="n">sense</span> <span class="ow">and</span> <span class="n">you</span> <span class="n">will</span> <span class="n">be</span> <span class="n">able</span> <span class="n">to</span> <span class="n">understand</span> <span class="n">when</span> <span class="n">revisiting</span> <span class="n">your</span> <span class="n">code</span><span class="o">.</span> <span class="n">This</span> <span class="n">item</span> <span class="n">name</span> <span class="n">can</span> <span class="n">then</span> <span class="n">be</span> <span class="n">referenced</span> <span class="n">inside</span> <span class="n">you</span> <span class="n">loop</span><span class="p">,</span> <span class="k">for</span> <span class="n">example</span> <span class="k">if</span> <span class="n">you</span> <span class="n">wanted</span> <span class="n">to</span> <span class="n">use</span> <span class="k">if</span> <span class="n">statements</span> <span class="n">to</span> <span class="n">perform</span> <span class="n">checks</span><span class="o">.</span>
+
+<span class="n">Let</span><span class="s">'s go ahead and work through several example of for loops using a variety of data object types. we'</span><span class="n">ll</span> <span class="n">start</span> <span class="n">simple</span> <span class="ow">and</span> <span class="n">build</span> <span class="n">more</span> <span class="n">complexity</span> <span class="n">later</span> <span class="n">on</span><span class="o">.</span>
+
+<span class="c">### Example 1</span>
+<span class="n">Iterating</span> <span class="n">through</span> <span class="n">a</span> <span class="nb">list</span><span class="o">.</span>
+
+<span class="sb">``</span><span class="err">`</span><span class="n">python</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+<span class="c"># We'll learn how to automate this sort of list in the next lecture</span>
+<span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span>
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
+    <span class="k">print</span> <span class="n">num</span>
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+<span class="mi">5</span>
+<span class="mi">6</span>
+<span class="mi">7</span>
+<span class="mi">8</span>
+<span class="mi">9</span>
+<span class="mi">10</span>
+</code></pre>
+</div>
+
+<p>Great! Hopefully this makes sense. Now lets add a if statement to check for even numbers. We’ll first introduce a new concept here–the modulo.</p>
+
+<h3 id="modulo">Modulo</h3>
+<p>The modulo allows us to get the remainder in a division and uses the % symbol. For example:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="mi">17</span> <span class="o">%</span> <span class="mi">5</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="mi">2</span>
+</code></pre>
+</div>
+
+<p>This makes sense since 17 divided by 5 is 3 remainder 2. Let’s see a few more quick examples:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">]:</span>
+<span class="c"># 3 Remainder 1</span>
+<span class="mi">10</span> <span class="o">%</span> <span class="mi">3</span>
+<span class="sb">``</span><span class="err">`</span><span class="n">python</span>
+<span class="sb">``</span><span class="err">`</span><span class="n">python</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">6</span><span class="p">]:</span><span class="mi">1</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">9</span><span class="p">]:</span>
+<span class="c"># 2 Remainder 4</span>
+<span class="mi">18</span> <span class="o">%</span> <span class="mi">7</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">9</span><span class="p">]:</span>
+<span class="mi">4</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">10</span><span class="p">]:</span>
+<span class="c"># 2 no remainder</span>
+<span class="mi">4</span> <span class="o">%</span> <span class="mi">2</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">10</span><span class="p">]:</span>
+<span class="mi">0</span>
+</code></pre>
+</div>
+
+<p>Notice that if a number is fully divisible with no remainder, the result of the modulo call is 0. We can use this to test for even numbers, since if a number modulo 2 is equal to 0, that means it is an even number!</p>
+
+<p>Back to the for loops!</p>
+
+<h3 id="example-2">Example 2</h3>
+<p>Let’s print only the even numbers from that list!</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">11</span><span class="p">]:</span>
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">num</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">print</span> <span class="n">num</span>
+<span class="mi">2</span>
+<span class="mi">4</span>
+<span class="mi">6</span>
+<span class="mi">8</span>
+<span class="mi">10</span>
+</code></pre>
+</div>
+
+<p>We could have also put in else statement in there:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">12</span><span class="p">]:</span>
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">num</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">print</span> <span class="n">num</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s">'Odd number'</span>
+<span class="n">Odd</span> <span class="n">number</span>
+<span class="mi">2</span>
+<span class="n">Odd</span> <span class="n">number</span>
+<span class="mi">4</span>
+<span class="n">Odd</span> <span class="n">number</span>
+<span class="mi">6</span>
+<span class="n">Odd</span> <span class="n">number</span>
+<span class="mi">8</span>
+<span class="n">Odd</span> <span class="n">number</span>
+<span class="mi">10</span>
+</code></pre>
+</div>
+
+<h2 id="example-3">Example 3</h2>
+
+<p>Another common idea during a for loop is keeping some sort of running tally during the multiple loops. For example, lets create a for loop that sums up the list:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">13</span><span class="p">]:</span>
+<span class="c"># Start sum at zero</span>
+<span class="n">list_sum</span> <span class="o">=</span> <span class="mi">0</span> 
+
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
+    <span class="n">list_sum</span> <span class="o">=</span> <span class="n">list_sum</span> <span class="o">+</span> <span class="n">num</span>
+
+<span class="k">print</span> <span class="n">list_sum</span>
+<span class="mi">55</span>
+</code></pre>
+</div>
+
+<p>Great! Read over the above cell and make sure you understand fully what is going on. Also we could have implemented a += to to the addition towards the sum. For example:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">14</span><span class="p">]:</span>
+<span class="c"># Start sum at zero</span>
+<span class="n">list_sum</span> <span class="o">=</span> <span class="mi">0</span> 
+
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
+    <span class="n">list_sum</span> <span class="o">+=</span> <span class="n">num</span>
+
+<span class="k">print</span> <span class="n">list_sum</span>
+<span class="mi">55</span>
+</code></pre>
+</div>
+
+<h2 id="example-4">Example 4</h2>
+<p>We’ve used for loops with lists, how about with strings? Remember strings are a sequence so when we iterate through them we will be accessing each item in that string.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">15</span><span class="p">]:</span>
+<span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s">'This is a string.'</span><span class="p">:</span>
+    <span class="k">print</span> <span class="n">letter</span>
+<span class="n">T</span>
+<span class="n">h</span>
+<span class="n">i</span>
+<span class="n">s</span>
+ 
+<span class="n">i</span>
+<span class="n">s</span>
+ 
+<span class="n">a</span>
+ 
+<span class="n">s</span>
+<span class="n">t</span>
+<span class="n">r</span>
+<span class="n">i</span>
+<span class="n">n</span>
+<span class="n">g</span>
+<span class="o">.</span>
+</code></pre>
+</div>
+
+<h2 id="example-5">Example 5</h2>
+<p>Let’s now look at how a for loop can be used with a tuple:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">16</span><span class="p">]:</span>
+<span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tup</span><span class="p">:</span>
+    <span class="k">print</span> <span class="n">t</span>
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+<span class="mi">5</span>
+</code></pre>
+</div>
+
+<h2 id="example-6">Example 6</h2>
+<p>Tuples have a special quality when it comes to for loops. If you are iterating through a sequence that contains tuples, the item can actually be the tuple itself, this is an example of tuple unpacking. During the for loop we will be unpacking the tuple inside of a sequence and we can access the individual items inside that tuple!</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">17</span><span class="p">]:</span>
+<span class="n">l</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">),(</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">),(</span><span class="mi">10</span><span class="p">,</span><span class="mi">12</span><span class="p">)]</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">18</span><span class="p">]:</span>
+<span class="k">for</span> <span class="n">tup</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
+    <span class="k">print</span> <span class="n">tup</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">19</span><span class="p">]:</span><span class="c"># Now with unpacking!</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">t1</span><span class="p">,</span><span class="n">t2</span><span class="p">)</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
+    <span class="k">print</span> <span class="n">t1</span>
+<span class="mi">2</span>
+<span class="mi">6</span>
+<span class="mi">10</span>
+</code></pre>
+</div>
+
+<p>Cool! With tuples in a sequence we can access the items inside of them through unpacking! The reason this is important is because many object will deliver their iterables through tuples. Let’s start exploring iterating through Dictionaries to explore this further!</p>
+
+<h2 id="example-7">Example 7</h2>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+<span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s">'k1'</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s">'k2'</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="s">'k3'</span><span class="p">:</span><span class="mi">3</span><span class="p">}</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+    <span class="k">print</span> <span class="n">item</span>
+<span class="n">k3</span>
+<span class="n">k2</span>
+<span class="n">k1</span>
+</code></pre>
+</div>
+
+<p>Notice how this produces only the keys. So how can we get the values? Or both the keys and the values?</p>
+
+<p>Here is where we are going to have a Python 3 Alert!</p>
+
+<h2 id="python-3-alert"><em>Python 3 Alert!</em></h2>
+
+<p>#Python 2: Use <code class="highlighter-rouge">.iteritems()</code> to iterate through
+In Python 2 you should use <code class="highlighter-rouge">.iteritems()</code> to iterate through the keys and values of a dictionary. This basically creates a generator (we will get into generators later on in the course) that will generate the keys and values of your dictionary. Let’s see it in action:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">9</span><span class="p">]:</span><span class="c"># Creates a generator</span>
+<span class="n">d</span><span class="o">.</span><span class="n">iteritems</span><span class="p">()</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">9</span><span class="p">]:</span>
+<span class="o">&lt;</span><span class="n">dictionary</span><span class="o">-</span><span class="n">itemiterator</span> <span class="n">at</span> <span class="mh">0x104365520</span><span class="o">&gt;</span>
+</code></pre>
+</div>
+<p>Calling the items() method returns a list of tuples. Now we can iterate through them just as we did in the previous examples.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">10</span><span class="p">]:</span>
+<span class="c"># Create a generator</span>
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">iteritems</span><span class="p">():</span>
+    <span class="k">print</span> <span class="n">k</span>
+    <span class="k">print</span> <span class="n">v</span>  
+<span class="n">k3</span>
+<span class="mi">3</span>
+<span class="n">k2</span>
+<span class="mi">2</span>
+<span class="n">k1</span>
+<span class="mi">1</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Python</span> <span class="mi">3</span><span class="p">:</span> <span class="n">items</span><span class="p">()</span>
+</code></pre>
+</div>
+<p>In Python 3 you should use .items() to iterate through the keys and values of a dictionary. For example:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">11</span><span class="p">]:</span>
+<span class="c"># For Python 3</span>
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">print</span> <span class="n">k</span>
+    <span class="k">print</span> <span class="n">v</span>  
+<span class="n">k3</span>
+<span class="mi">3</span>
+<span class="n">k2</span>
+<span class="mi">2</span>
+<span class="n">k1</span>
+<span class="mi">1</span>
+</code></pre>
+</div>
+
+<p>You might be wondering why this worked in Python 2. This is because of the introduction of generators to Python during its earlier years. (We will go over generators and what they are in a future section, but the basic notion is that generators don’t store data in memory, but instead just yield it to you as it goes through an iterable item).</p>
+
+<p>Originally, Python <code class="highlighter-rouge">items()</code> built a real list of tuples and returned that. That could potentially take a lot of extra memory.</p>
+
+<p>Then, generators were introduced to the language in general, and that method was reimplemented as an iterator-generator method named <code class="highlighter-rouge">iteritems()</code>. The original remains for backwards compatibility.</p>
+
+<p>One of Python 3’s changes is that <code class="highlighter-rouge">items()</code> now return iterators, and a list is never fully built. The <code class="highlighter-rouge">iteritems()</code> method is also gone, since <code class="highlighter-rouge">items()</code> now works like <code class="highlighter-rouge">iteritems()</code> in Python 2.</p>
+
+<h3 id="conclusion">Conclusion</h3>
+<p>We’ve learned how to use for loops to iterate through tuples,lists,strings, and dictionaries. It will be an important tool for us, so make sure you know it well and understood the above examples.</p>
+
+<h2 id="coming-up-next---while-loops"><a href="python-tutorial/2016/12/30/while-loop.html">Coming up Next - while Loops</a></h2>
+
+
+      <footer class="site-footer">
+  <span class="site-footer-owner"><a href="http://localhost:4000">Maddy's Blogs</a> is maintained by <a href="http://maddymaster.github.io">Maddy Anand</a>.</span>
+  <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+</footer>
+
+
+    </section>
+
+  </body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  
+  <head>
+  <meta charset="UTF-8">
+  <title>Maddy's Blogs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#157878">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/cayman.css">
+</head>
+
+  <body>
+    <section class="page-header">
+  <h1 class="project-name">Maddy's Blogs</h1>
+  <h2 class="project-tagline">My Latest Blog Posts</h2>
+  <a href="#" class="btn">About Me</a>
+  <a href="/" class="btn">Home</a>
+  <a href="#" class="btn"> Product Development </a>
+  <a href="#" class="btn"> Tools & DevOps </a>
+</section>
+
+
+    <section class="main-content">
+      
+      <h1 id="while-loops">while loops</h1>
+
+<p>The <em>while</em> statement in Python is one of most general ways to perform iteration. A while statement will repeatedly execute a single statement or group of statements as long as the condition is true. The reason it is called a ‘loop’ is because the code statements are looped through over and over again until the condition is met.</p>
+
+<p>The general format of a while loop is:</p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">while</span> <span class="n">test</span><span class="p">:</span>
+    <span class="n">code</span> <span class="n">statement</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">final</span> <span class="n">code</span> <span class="n">statements</span>
+    <span class="sb">``</span><span class="err">`</span>
+
+<span class="n">Let</span><span class="err">’</span><span class="n">s</span> <span class="n">look</span> <span class="n">at</span> <span class="n">a</span> <span class="n">few</span> <span class="n">simple</span> <span class="k">while</span> <span class="n">loops</span> <span class="ow">in</span> <span class="n">action</span><span class="o">.</span>
+
+<span class="sb">``</span><span class="err">`</span><span class="n">python</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">while</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">'x is currently: '</span><span class="p">,</span><span class="n">x</span>
+    <span class="k">print</span> <span class="s">' x is still less than 10, adding 1 to x'</span>
+    <span class="n">x</span><span class="o">+=</span><span class="mi">1</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">x</span> <span class="ow">is</span> <span class="n">currently</span><span class="p">:</span>  <span class="mi">0</span>
+ <span class="n">x</span> <span class="ow">is</span> <span class="n">still</span> <span class="n">less</span> <span class="n">than</span> <span class="mi">10</span><span class="p">,</span> <span class="n">adding</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">x</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="n">currently</span><span class="p">:</span>  <span class="mi">1</span>
+ <span class="n">x</span> <span class="ow">is</span> <span class="n">still</span> <span class="n">less</span> <span class="n">than</span> <span class="mi">10</span><span class="p">,</span> <span class="n">adding</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">x</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="n">currently</span><span class="p">:</span>  <span class="mi">2</span>
+ <span class="n">x</span> <span class="ow">is</span> <span class="n">still</span> <span class="n">less</span> <span class="n">than</span> <span class="mi">10</span><span class="p">,</span> <span class="n">adding</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">x</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="n">currently</span><span class="p">:</span>  <span class="mi">3</span>
+ <span class="n">x</span> <span class="ow">is</span> <span class="n">still</span> <span class="n">less</span> <span class="n">than</span> <span class="mi">10</span><span class="p">,</span> <span class="n">adding</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">x</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="n">currently</span><span class="p">:</span>  <span class="mi">4</span>
+ <span class="n">x</span> <span class="ow">is</span> <span class="n">still</span> <span class="n">less</span> <span class="n">than</span> <span class="mi">10</span><span class="p">,</span> <span class="n">adding</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">x</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="n">currently</span><span class="p">:</span>  <span class="mi">5</span>
+ <span class="n">x</span> <span class="ow">is</span> <span class="n">still</span> <span class="n">less</span> <span class="n">than</span> <span class="mi">10</span><span class="p">,</span> <span class="n">adding</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">x</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="n">currently</span><span class="p">:</span>  <span class="mi">6</span>
+ <span class="n">x</span> <span class="ow">is</span> <span class="n">still</span> <span class="n">less</span> <span class="n">than</span> <span class="mi">10</span><span class="p">,</span> <span class="n">adding</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">x</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="n">currently</span><span class="p">:</span>  <span class="mi">7</span>
+ <span class="n">x</span> <span class="ow">is</span> <span class="n">still</span> <span class="n">less</span> <span class="n">than</span> <span class="mi">10</span><span class="p">,</span> <span class="n">adding</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">x</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="n">currently</span><span class="p">:</span>  <span class="mi">8</span>
+ <span class="n">x</span> <span class="ow">is</span> <span class="n">still</span> <span class="n">less</span> <span class="n">than</span> <span class="mi">10</span><span class="p">,</span> <span class="n">adding</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">x</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="n">currently</span><span class="p">:</span>  <span class="mi">9</span>
+ <span class="n">x</span> <span class="ow">is</span> <span class="n">still</span> <span class="n">less</span> <span class="n">than</span> <span class="mi">10</span><span class="p">,</span> <span class="n">adding</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">x</span>
+</code></pre>
+</div>
+
+<p>Notice how many times the print statements occurred and how the while loop kept going until the True condition was met, which occurred once x==10. Its important to note that once this occurred the code stopped. Lets see how we could add an else statement:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">'x is currently: '</span><span class="p">,</span><span class="n">x</span>
+    <span class="k">print</span> <span class="s">' x is still less than 10, adding 1 to x'</span>
+    <span class="n">x</span><span class="o">+=</span><span class="mi">1</span>
+    
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">'All Done!'</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">x</span> <span class="ow">is</span> <span class="n">currently</span><span class="p">:</span>  <span class="mi">0</span>
+ <span class="n">x</span> <span class="ow">is</span> <span class="n">still</span> <span class="n">less</span> <span class="n">than</span> <span class="mi">10</span><span class="p">,</span> <span class="n">adding</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">x</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="n">currently</span><span class="p">:</span>  <span class="mi">1</span>
+ <span class="n">x</span> <span class="ow">is</span> <span class="n">still</span> <span class="n">less</span> <span class="n">than</span> <span class="mi">10</span><span class="p">,</span> <span class="n">adding</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">x</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="n">currently</span><span class="p">:</span>  <span class="mi">2</span>
+ <span class="n">x</span> <span class="ow">is</span> <span class="n">still</span> <span class="n">less</span> <span class="n">than</span> <span class="mi">10</span><span class="p">,</span> <span class="n">adding</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">x</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="n">currently</span><span class="p">:</span>  <span class="mi">3</span>
+ <span class="n">x</span> <span class="ow">is</span> <span class="n">still</span> <span class="n">less</span> <span class="n">than</span> <span class="mi">10</span><span class="p">,</span> <span class="n">adding</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">x</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="n">currently</span><span class="p">:</span>  <span class="mi">4</span>
+ <span class="n">x</span> <span class="ow">is</span> <span class="n">still</span> <span class="n">less</span> <span class="n">than</span> <span class="mi">10</span><span class="p">,</span> <span class="n">adding</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">x</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="n">currently</span><span class="p">:</span>  <span class="mi">5</span>
+ <span class="n">x</span> <span class="ow">is</span> <span class="n">still</span> <span class="n">less</span> <span class="n">than</span> <span class="mi">10</span><span class="p">,</span> <span class="n">adding</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">x</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="n">currently</span><span class="p">:</span>  <span class="mi">6</span>
+ <span class="n">x</span> <span class="ow">is</span> <span class="n">still</span> <span class="n">less</span> <span class="n">than</span> <span class="mi">10</span><span class="p">,</span> <span class="n">adding</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">x</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="n">currently</span><span class="p">:</span>  <span class="mi">7</span>
+ <span class="n">x</span> <span class="ow">is</span> <span class="n">still</span> <span class="n">less</span> <span class="n">than</span> <span class="mi">10</span><span class="p">,</span> <span class="n">adding</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">x</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="n">currently</span><span class="p">:</span>  <span class="mi">8</span>
+ <span class="n">x</span> <span class="ow">is</span> <span class="n">still</span> <span class="n">less</span> <span class="n">than</span> <span class="mi">10</span><span class="p">,</span> <span class="n">adding</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">x</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="n">currently</span><span class="p">:</span>  <span class="mi">9</span>
+ <span class="n">x</span> <span class="ow">is</span> <span class="n">still</span> <span class="n">less</span> <span class="n">than</span> <span class="mi">10</span><span class="p">,</span> <span class="n">adding</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">x</span>
+<span class="n">All</span> <span class="n">Done</span><span class="err">!</span>
+</code></pre>
+</div>
+
+<h2 id="break-continue-pass">break, continue, pass</h2>
+<p>We can use break, continue, and pass statements in our loops to add additional functionality for various cases. The three statements are defined by:</p>
+
+<p><em>break</em> : Breaks out of the current closest enclosing loop.
+<em>continue</em>: Goes to the top of the closest enclosing loop.
+pass: Does nothing at all.</p>
+
+<p>Thinking about break and continue statements, the general format of the while loop looks like this:</p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">while</span> <span class="n">test</span><span class="p">:</span> 
+    <span class="n">code</span> <span class="n">statement</span>
+    <span class="k">if</span> <span class="n">test</span><span class="p">:</span> 
+        <span class="k">break</span>
+    <span class="k">if</span> <span class="n">test</span><span class="p">:</span> 
+        <span class="k">continue</span> 
+<span class="k">else</span><span class="p">:</span>
+</code></pre>
+</div>
+
+<p>break and continue statements can appear anywhere inside the loop’s body,but we will usually put them further nested in conjunction with an if statement to perform an action based on some condition.</p>
+
+<p>Lets go ahead and look at some examples!</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">]:</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">'x is currently: '</span><span class="p">,</span><span class="n">x</span>
+    <span class="k">print</span> <span class="s">' x is still less than 10, adding 1 to x'</span>
+    <span class="n">x</span><span class="o">+=</span><span class="mi">1</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span><span class="mi">3</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s">'x==3'</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s">'continuing...'</span>
+        <span class="k">continue</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="n">currently</span><span class="p">:</span>  <span class="mi">0</span>
+ <span class="n">x</span> <span class="ow">is</span> <span class="n">still</span> <span class="n">less</span> <span class="n">than</span> <span class="mi">10</span><span class="p">,</span> <span class="n">adding</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">x</span>
+<span class="n">continuing</span><span class="o">...</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="n">currently</span><span class="p">:</span>  <span class="mi">1</span>
+ <span class="n">x</span> <span class="ow">is</span> <span class="n">still</span> <span class="n">less</span> <span class="n">than</span> <span class="mi">10</span><span class="p">,</span> <span class="n">adding</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">x</span>
+<span class="n">continuing</span><span class="o">...</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="n">currently</span><span class="p">:</span>  <span class="mi">2</span>
+ <span class="n">x</span> <span class="ow">is</span> <span class="n">still</span> <span class="n">less</span> <span class="n">than</span> <span class="mi">10</span><span class="p">,</span> <span class="n">adding</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">x</span>
+<span class="n">x</span><span class="o">==</span><span class="mi">3</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="n">currently</span><span class="p">:</span>  <span class="mi">3</span>
+ <span class="n">x</span> <span class="ow">is</span> <span class="n">still</span> <span class="n">less</span> <span class="n">than</span> <span class="mi">10</span><span class="p">,</span> <span class="n">adding</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">x</span>
+<span class="n">continuing</span><span class="o">...</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="n">currently</span><span class="p">:</span>  <span class="mi">4</span>
+ <span class="n">x</span> <span class="ow">is</span> <span class="n">still</span> <span class="n">less</span> <span class="n">than</span> <span class="mi">10</span><span class="p">,</span> <span class="n">adding</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">x</span>
+<span class="n">continuing</span><span class="o">...</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="n">currently</span><span class="p">:</span>  <span class="mi">5</span>
+ <span class="n">x</span> <span class="ow">is</span> <span class="n">still</span> <span class="n">less</span> <span class="n">than</span> <span class="mi">10</span><span class="p">,</span> <span class="n">adding</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">x</span>
+<span class="n">continuing</span><span class="o">...</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="n">currently</span><span class="p">:</span>  <span class="mi">6</span>
+ <span class="n">x</span> <span class="ow">is</span> <span class="n">still</span> <span class="n">less</span> <span class="n">than</span> <span class="mi">10</span><span class="p">,</span> <span class="n">adding</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">x</span>
+<span class="n">continuing</span><span class="o">...</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="n">currently</span><span class="p">:</span>  <span class="mi">7</span>
+ <span class="n">x</span> <span class="ow">is</span> <span class="n">still</span> <span class="n">less</span> <span class="n">than</span> <span class="mi">10</span><span class="p">,</span> <span class="n">adding</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">x</span>
+<span class="n">continuing</span><span class="o">...</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="n">currently</span><span class="p">:</span>  <span class="mi">8</span>
+ <span class="n">x</span> <span class="ow">is</span> <span class="n">still</span> <span class="n">less</span> <span class="n">than</span> <span class="mi">10</span><span class="p">,</span> <span class="n">adding</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">x</span>
+<span class="n">continuing</span><span class="o">...</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="n">currently</span><span class="p">:</span>  <span class="mi">9</span>
+ <span class="n">x</span> <span class="ow">is</span> <span class="n">still</span> <span class="n">less</span> <span class="n">than</span> <span class="mi">10</span><span class="p">,</span> <span class="n">adding</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">x</span>
+<span class="n">continuing</span><span class="o">...</span>
+</code></pre>
+</div>
+<p>Note how we have a printed statement when x==3, and a continue being printed out as we continue through the outer while loop. Let’s put in a break once x ==3 and see if the result makes sense:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">7</span><span class="p">]:</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">'x is currently: '</span><span class="p">,</span><span class="n">x</span>
+    <span class="k">print</span> <span class="s">' x is still less than 10, adding 1 to x'</span>
+    <span class="n">x</span><span class="o">+=</span><span class="mi">1</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span><span class="mi">3</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s">'Breaking because x==3'</span>
+        <span class="k">break</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s">'continuing...'</span>
+        <span class="k">continue</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="n">currently</span><span class="p">:</span>  <span class="mi">0</span>
+ <span class="n">x</span> <span class="ow">is</span> <span class="n">still</span> <span class="n">less</span> <span class="n">than</span> <span class="mi">10</span><span class="p">,</span> <span class="n">adding</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">x</span>
+<span class="n">continuing</span><span class="o">...</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="n">currently</span><span class="p">:</span>  <span class="mi">1</span>
+ <span class="n">x</span> <span class="ow">is</span> <span class="n">still</span> <span class="n">less</span> <span class="n">than</span> <span class="mi">10</span><span class="p">,</span> <span class="n">adding</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">x</span>
+<span class="n">continuing</span><span class="o">...</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="n">currently</span><span class="p">:</span>  <span class="mi">2</span>
+ <span class="n">x</span> <span class="ow">is</span> <span class="n">still</span> <span class="n">less</span> <span class="n">than</span> <span class="mi">10</span><span class="p">,</span> <span class="n">adding</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">x</span>
+<span class="n">Breaking</span> <span class="n">because</span> <span class="n">x</span><span class="o">==</span><span class="mi">3</span>
+</code></pre>
+</div>
+
+<p>Note how the other else statement wasn’t reached and continuing was never printed!</p>
+
+<p>After these brief but simple examples, you should feel comfortable using while statements in you code.</p>
+
+<p>A word of caution however! It is possible to create an infinitely running loop with while statements. For example:</p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span> <span class="p">]:</span>
+<span class="c"># DO NOT RUN THIS CODE!!!! </span>
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">'Uh Oh infinite Loop!'</span>
+</code></pre>
+</div>
+
+<p><a href="/python-tutorial/2016/12/31/range.html">Next up <code class="highlighter-rouge">range()</code></a></p>
+
+
+      <footer class="site-footer">
+  <span class="site-footer-owner"><a href="http://localhost:4000">Maddy's Blogs</a> is maintained by <a href="http://maddymaster.github.io">Maddy Anand</a>.</span>
+  <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+</footer>
+
+
+    </section>
+
+  </body>
+</html>
