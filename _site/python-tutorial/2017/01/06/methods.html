@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  
+  <head>
+  <meta charset="UTF-8">
+  <title>Maddy's Blogs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#157878">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/cayman.css">
+</head>
+
+  <body>
+    <section class="page-header">
+  <h1 class="project-name">Maddy's Blogs</h1>
+  <h2 class="project-tagline">My Latest Blog Posts</h2>
+  <a href="#" class="btn">About Me</a>
+  <a href="/" class="btn">Home</a>
+  <a href="#" class="btn"> Product Development </a>
+  <a href="#" class="btn"> Tools & DevOps </a>
+</section>
+
+
+    <section class="main-content">
+      
+      <h2 id="methods">Methods</h2>
+<p>We’ve already seen a few example of methods when learning about Object and Data Structure Types in Python. Methods are essentially functions built into objects. Later on in the course we will learn about how to create our own objects and methods using Object Oriented Programming (OOP) and classes.</p>
+
+<p>Methods will perform specific actions on the object and can also take arguments, just like a function. This lecture will serve as just a brief introduction to methods and get you thinking about overall design methods that we will touch back upon when we reach OOP in the course.</p>
+
+<p>Methods are in the form:</p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="nb">object</span><span class="o">.</span><span class="n">method</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span><span class="n">arg2</span><span class="p">,</span><span class="n">etc</span><span class="o">...</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>You’ll later see that we can think of methods as having an argument ‘self’ referring to the object itself. You can’t see this argument but we will be using it later on in the course during the OOP lectures.</p>
+
+<p>Lets take a quick look at what an example of the various methods a list has:</p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span><span class="c"># Create a simple list</span>
+<span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+</code></pre>
+</div>
+<p>Fortunately, with iPython and the Jupyter Notebook we can quickly see all the possible methods using the tab key. The methods for a list are:</p>
+
+<p><code class="highlighter-rouge">append</code>
+<code class="highlighter-rouge">count</code>
+<code class="highlighter-rouge">extend</code>
+<code class="highlighter-rouge">insert</code>
+<code class="highlighter-rouge">pop</code>
+<code class="highlighter-rouge">remove</code>
+<code class="highlighter-rouge">reverse</code>
+<code class="highlighter-rouge">sort</code></p>
+
+<p>Let’s try out a few of them:</p>
+
+<p>append() allows us to add elements to the end of a list:</p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span><span class="n">l</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span><span class="n">l</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">4</span><span class="p">]:[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+</code></pre>
+</div>
+<p>Great! Now how about count()? The count() method will count the number of occurrences of an element in a list.</p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">7</span><span class="p">]:</span><span class="c"># Check how many times 2 shows up in the list</span>
+<span class="n">l</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">7</span><span class="p">]:</span><span class="mi">1</span>
+</code></pre>
+</div>
+<p>You can always use Shift+Tab in the Jupyter Notebook to get more help about the method. In general Python you can use the help() function:
+```python
+In [17]:help(l.count)
+Help on built-in function count:</p>
+
+<p>count(…)
+    L.count(value) -&gt; integer – return number of occurrences of value
+```python</p>
+
+<p>Feel free to play around with the rest of the methods for a list. Later on in this section your quiz will involve using help and Google searching for methods of different types of objects!</p>
+
+<p>Great! By this lecture you should feel comfortable calling methods of objects in Python!</p>
+
+
+      <footer class="site-footer">
+  <span class="site-footer-owner"><a href="http://localhost:4000">Maddy's Blogs</a> is maintained by <a href="http://maddymaster.github.io">Maddy Anand</a>.</span>
+  <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+</footer>
+
+
+    </section>
+
+  </body>
+</html>
