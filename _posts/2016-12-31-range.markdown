@@ -101,3 +101,5 @@ So the main takeaway here is for Python 2, if you are using `range()` in a way t
 
 You should now have a good understanding of how to use `range()` in either version of Python.
 
+## [Next "List Comprehensions"]()
+
