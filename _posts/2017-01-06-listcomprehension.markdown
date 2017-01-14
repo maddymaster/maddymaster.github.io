@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  "LIst Comprehensions"
+title:  "List Comprehensions"
 date:   2017-01-06 5:50:00
 categories: Python-Tutorial
 ---
@@ -10,7 +10,8 @@ In addition to sequence operations and list methods, Python includes a more adva
 
 List comprehensions allow us to build out lists using a different notation. You can think of it as essentially a one line for loop built inside of brackets. For a simple example:
 
-### Example 1
+### Example 1:
+
 ```python
 In [1]:# Grab every letter in string
 lst = [x for x in 'word']
@@ -26,7 +27,7 @@ This is the basic idea of a list comprehension. If you're familiar with mathemat
 
 Lets see a few more example of list comprehensions in Python:
 
-### Example 2
+### Example 2:
 ```python
 In [1]:# Square numbers in range and turn into list
 lst = [x**2 for x in range(0,11)]
