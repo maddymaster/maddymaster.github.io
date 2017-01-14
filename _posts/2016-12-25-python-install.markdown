@@ -6,7 +6,7 @@ categories: Python-Tutorial
 ---
 
 
-# COURSE MATERIALS INSTALLATION GUIDE
+# PYTHON INSTALLATION GUIDE
 
 In this text article we'll go over a written guide to installing the course materials. If you prefer to follow a video guide, check out the next lectures that correspond to your OS anywhere online (or even Youtube), however, installation is actually very straight-forward.
 
@@ -33,3 +33,6 @@ You should see something like this:![alt text](/src/images/jupyter.png)
 We will be using this throughout the course. In the empty cell we type our code and shift+tab will run the code or you may also click on the 'Play' button at the top to run/execute the code.
 
 You can try a simple ```print ('Hello World')``` and press shift+tab and see the code execute. Use this to try out all the code examples throughout this course. Hope it works out well. If no go, feel free to use any IDE you like. I would recommend PyCharm and Sublime over anything else. I also favor VIM and EMACS.
+
+Now lets quickly take a look at other resources that can help you learn and practice python along the way. 
+### [Click here](/python-tutorial/2016/12/25/practice.html)

@@ -252,7 +252,7 @@ matrix[0][0]
 ```
 Output: `l`
 
-##List Comprehensions
+## List Comprehensions
 
 Python has an advanced feature called list comprehensions. They allow for quick construction of lists. To fully understand list comprehensions we need to understand for loops. So don't worry if you don't completely understand this section, and feel free to just skip it since we will return to this topic later.
 

@@ -301,4 +301,4 @@ One of Python 3’s changes is that `items()` now return iterators, and a list i
 ### Conclusion
 We've learned how to use for loops to iterate through tuples,lists,strings, and dictionaries. It will be an important tool for us, so make sure you know it well and understood the above examples.
 
-## [Coming up Next - while Loops](python-tutorial/2016/12/30/while-loop.html)
+## [Coming up Next - while Loops](/python-tutorial/2016/12/30/while-loop.html)

@@ -98,4 +98,4 @@ Welcome George!
 ## Indentation
 It is important to keep a good understanding of how indentation works in Python to maintain the structure and order of your code. We will touch on this topic again when we start building out functions!
 
-## [Next Up For Loops]()
+## [Next Up For Loops](/python-tutorial/2016/12/30/for-loop.html)

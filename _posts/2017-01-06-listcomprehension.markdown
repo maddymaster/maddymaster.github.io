@@ -38,7 +38,8 @@ In [2]:lst
 ```python
 Out[2]:[0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
 ```
-### Example 3
+### Example 3:
+
 Lets see how to add in if statements:
 ```python
 In [5]:# Check for even numbers in a range
@@ -76,4 +77,4 @@ Out[8]:[0, 1, 16, 81, 256, 625, 1296, 2401, 4096, 6561, 10000]
 
 Later on in the course we will learn about generator comprehensions. After this lecture you should feel comfortable reading and writing basic list comprehensions.
 
-## Coming up Next - Methods
+## Coming up Next - [Methods](/python-tutorial/2017/01/06/methods.html)

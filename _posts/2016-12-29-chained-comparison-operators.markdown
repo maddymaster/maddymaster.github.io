@@ -64,3 +64,5 @@ Out[6]: True
 ```
 
 Great! For an overview of this quick lesson: You should have a comfortable understanding of using and and or statements as well as reading chained comparison code.
+
+## Next - [Python Statements] (/python-tutorial/2016/12/29/python-statements-intro.html)

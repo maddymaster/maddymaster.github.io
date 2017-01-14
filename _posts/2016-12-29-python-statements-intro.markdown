@@ -69,4 +69,4 @@ Note how Python is so heavily driven by code indentation and whitespace. This me
 
 Now let's start diving deeper by coding these sort of statements in Python!
 
-Time to code!
+[Time to code!](/python-tutorial/2016/12/29/python-statements2.html)
