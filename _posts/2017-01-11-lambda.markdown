@@ -117,6 +117,7 @@ In [25]:rev('hello')
 Out[25]:'olleh'
 ```
 ### Example 4
+
 Just like a normal function, we can accept more than one function into a lambda expression:
 
 ```python
