@@ -71,7 +71,8 @@ Out[9]:4
 ```
 And there you have it! The breakdown of a function into a lambda expression! Lets see a few more examples:
 
-Example 1
+### Example 1
+
 Check it a number is even
 ```python
 In [13]:even = lambda x: x%2==0
@@ -90,6 +91,7 @@ Out[15]:True
 ```
 
 ### Example 2
+
 Grab first character of a string:
 
 ```python
