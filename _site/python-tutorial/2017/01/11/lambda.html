@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  
+  <head>
+  <meta charset="UTF-8">
+  <title>Maddy's Blogs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#157878">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/cayman.css">
+</head>
+
+  <body>
+    <section class="page-header">
+  <h1 class="project-name">Maddy's Blogs</h1>
+  <h2 class="project-tagline">My Latest Blog Posts</h2>
+  <a href="#" class="btn">About Me</a>
+  <a href="/" class="btn">Home</a>
+  <a href="#" class="btn"> Product Development </a>
+  <a href="#" class="btn"> Tools & DevOps </a>
+</section>
+
+
+    <section class="main-content">
+      
+      <h2 id="lambda-expressions">Lambda Expressions</h2>
+<p>One of Pythons most useful (and for beginners, confusing) tools is the lambda expression. lambda expressions allow us to create “anonymous” functions. This basically means we can quickly make ad-hoc functions without needing to properly define a function using def.</p>
+
+<p>Function objects returned by running lambda expressions work exactly the same as those created and assigned by defs. There is key difference that makes lambda useful in specialized roles:</p>
+
+<p>lambda’s body is a single expression, not a block of statements.</p>
+
+<p>The lambda’s body is similar to what we would put in a def body’s return statement. We simply type the result as an expression instead of explicitly returning it. Because it is limited to an expression, a lambda is less general that a def. We can only squeeze design, to limit program nesting. lambda is designed for coding simple functions, and def handles the larger tasks.
+Lets slowly break down a lambda expression by deconstructing a function:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span><span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">num</span><span class="o">**</span><span class="mi">2</span>
+    <span class="k">return</span> <span class="n">result</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span><span class="n">square</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span><span class="mi">4</span>
+</code></pre>
+</div>
+<p>Continuing the breakdown:</p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span><span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">num</span><span class="o">**</span><span class="mi">2</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span><span class="n">square</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span><span class="mi">4</span>
+</code></pre>
+</div>
+<p>We can actually write this in one line (although it would be bad style to do so)</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span><span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">num</span><span class="p">):</span> <span class="k">return</span> <span class="n">num</span><span class="o">**</span><span class="mi">2</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">]:</span><span class="n">square</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">6</span><span class="p">]:</span><span class="mi">4</span>
+</code></pre>
+</div>
+<p>This is the form a function that a lambda expression intends to replicate. A lambda expression can then be written as:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">7</span><span class="p">]:</span><span class="k">lambda</span> <span class="n">num</span><span class="p">:</span> <span class="n">num</span><span class="o">**</span><span class="mi">2</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">7</span><span class="p">]:</span><span class="o">&lt;</span><span class="n">function</span> <span class="n">__main__</span><span class="o">.&lt;</span><span class="k">lambda</span><span class="o">&gt;&gt;</span>
+</code></pre>
+</div>
+<p>Note how we get a function back. We can assign this function to a label:</p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">8</span><span class="p">]:</span><span class="n">square</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">num</span><span class="p">:</span> <span class="n">num</span><span class="o">**</span><span class="mi">2</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">9</span><span class="p">]:</span><span class="n">square</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">9</span><span class="p">]:</span><span class="mi">4</span>
+</code></pre>
+</div>
+<p>And there you have it! The breakdown of a function into a lambda expression! Lets see a few more examples:</p>
+
+<p>Example 1
+Check it a number is even</p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">13</span><span class="p">]:</span><span class="n">even</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">14</span><span class="p">]:</span><span class="n">even</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">14</span><span class="p">]:</span><span class="bp">False</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">15</span><span class="p">]:</span><span class="n">even</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">15</span><span class="p">]:</span><span class="bp">True</span>
+</code></pre>
+</div>
+
+<h3 id="example-2">Example 2</h3>
+<p>Grab first character of a string:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">22</span><span class="p">]:</span><span class="n">first</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">23</span><span class="p">]:</span><span class="n">first</span><span class="p">(</span><span class="s">'hello'</span><span class="p">)</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">23</span><span class="p">]:</span><span class="s">'h'</span>
+</code></pre>
+</div>
+<h3 id="example-3">Example 3</h3>
+<p>Reverse a string:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">24</span><span class="p">]:</span><span class="n">rev</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">s</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">25</span><span class="p">]:</span><span class="n">rev</span><span class="p">(</span><span class="s">'hello'</span><span class="p">)</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">25</span><span class="p">]:</span><span class="s">'olleh'</span>
+</code></pre>
+</div>
+<h3 id="example-4">Example 4</h3>
+<p>Just like a normal function, we can accept more than one function into a lambda expression:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">17</span><span class="p">]:</span><span class="n">adder</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="p">:</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">In</span> <span class="p">[</span><span class="mi">19</span><span class="p">]:</span><span class="n">adder</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+</code></pre>
+</div>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">Out</span><span class="p">[</span><span class="mi">19</span><span class="p">]:</span><span class="mi">5</span>
+</code></pre>
+</div>
+<p>lambda expressions really shine when used in conjunction with <code class="highlighter-rouge">map()</code>, <code class="highlighter-rouge">filter()</code> and <code class="highlighter-rouge">reduce()</code>. Each of those functions has its own lecture, so feel free to explore them if you’re very interested in lambda.</p>
+
+<p>I highly recommend reading this blog post at Python Conquers the Universe for a great breakdown on lambda expressions and some explanations of common confusions!</p>
+
+
+      <footer class="site-footer">
+  <span class="site-footer-owner"><a href="http://localhost:4000">Maddy's Blogs</a> is maintained by <a href="http://maddymaster.github.io">Maddy Anand</a>.</span>
+  <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+</footer>
+
+
+    </section>
+
+  </body>
+</html>
