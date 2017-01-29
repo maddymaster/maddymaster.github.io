@@ -26,16 +26,20 @@ In [2]:square(2)
 Out[2]:4
 ```
 Continuing the breakdown:
+
 ```python
 In [3]:def square(num):
     return num**2
 ```
+
 ```python
 In [4]:square(2)
 ```
+
 ```python
 Out[4]:4
 ```
+
 We can actually write this in one line (although it would be bad style to do so)
 
 ```python
@@ -98,6 +102,7 @@ In [23]:first('hello')
 Out[23]:'h'
 ```
 ### Example 3
+
 Reverse a string:
 
 ```python
